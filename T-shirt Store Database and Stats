@@ -1,0 +1,33 @@
+--Create a T-shirt Store Database
+CREATE TABLE shirts (id INTEGER PRIMARY KEY, name TEXT, color TEXT, size TEXT, price INTEGER);
+
+INSERT INTO shirts VALUES (1, "shirt style 1", "white", "small", 10);
+INSERT INTO shirts VALUES (2, "shirt style 1", "white", "medium", 11);
+INSERT INTO shirts VALUES (3, "shirt style 1", "white", "large", 12);
+INSERT INTO shirts VALUES (4, "shirt style 2", "black", "small", 12);
+INSERT INTO shirts VALUES (5, "shirt style 2", "black", "medium", 13);
+INSERT INTO shirts VALUES (6, "shirt style 2", "black", "large", 14);
+INSERT INTO shirts VALUES (7, "shirt style 3", "gray", "small", 12);
+INSERT INTO shirts VALUES (8, "shirt style 3", "gray", "medium", 13);
+INSERT INTO shirts VALUES (9, "shirt style 3", "gray", "large", 14);
+INSERT INTO shirts VALUES (10, "shirt style 4", "tie-dye", "small", 15);
+INSERT INTO shirts VALUES (11, "shirt style 4", "tie-dye", "medium", 16);
+INSERT INTO shirts VALUES (12, "shirt style 4", "tie-dye", "large", 17);
+INSERT INTO shirts VALUES (13, "shirt style 5", "navy blue", "small", 11);
+INSERT INTO shirts VALUES (14, "shirt style 5", "navy blue", "medium", 12);
+INSERT INTO shirts VALUES (15, "shirt style 5", "navy blue", "large", 13);
+
+--Display database
+SELECT * FROM shirts;
+
+--Display database ordered by price
+SELECT * FROM shirts ORDER BY price;
+
+--Which shirts are greater than $13?
+SELECT * FROM shirts WHERE price >13;
+
+--What is the price of the most expesive shirt?
+SELECT MAX (price) FROM shirts;
+
+--What is the price of the least expensive shirt?
+SELECT MIN (price) FROM shirts;
